@@ -4,21 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PegawaiController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-            $data ['name']  = 'Teuku M Hasbi Alghifari';
-    $data ['my_age']       = date('2005-06-10' );
-     $data ['tgl_harus_wisuda']       = date('2028-06-10' );
-
-    $data ['time_to_study_left']      = (date('y') - 3);
-     $data ['tahun_sekarang']      = date('Y-m-d');
-    $data ['hobi'] = ['memancing','melukis','gym','lari',];
-    return view('informasi', $data );
+          $data ['username']  = 'selamat datang di website bina desa';
+    $data ['last_login']      = date('Y-m-d H:i:s');
+    $data ['list_pendidikan'] = ['SD','SMP','SMA','S1','S2','S3'];
+    return view('home', $data );
     }
 
     /**
