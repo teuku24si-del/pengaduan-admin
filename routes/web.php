@@ -59,3 +59,5 @@ Route::prefix('profile')->group(function () {
     Route::delete('/destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/multipleuploads', 'MultipleuploadsController@index')->name('uploads');
+Route::post('/save','MultipleuploadsController@store')->name('uploads.store');
