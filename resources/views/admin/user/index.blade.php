@@ -38,7 +38,10 @@
                         <div class="table-responsive">
                             <table id="table-user" class="table table-centered table-nowrap mb-0 rounded">
                                 <thead class="thead-light">
+
+                                  
                                     <tr>
+
                                         <th class="border-0">Nama Lengkap</th>
                                         <th class="border-0">Email</th>
                                         <th class="border-0">password</th>
@@ -49,6 +52,7 @@
                                 <tbody>
                                     @foreach ($datauser as $item)
                                         <tr>
+
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->password }}</td>
