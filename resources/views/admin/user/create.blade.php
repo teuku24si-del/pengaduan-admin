@@ -37,6 +37,17 @@
                         @csrf
                         <div class="row mb-4">
                             <div class="col-lg-4 col-sm-6">
+
+                                 <div class="mb-3">
+                                    <label for="gender" class="form-label">role</label>
+                                    <select id="gender" name="role" class="form-select">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="super admin">super admin</option>
+                                        <option value="pelanggan">pelanggan</option>
+                                        <option value="mitra">mitra</option>
+                                    </select>
+                                </div>
+
                                 <!-- Name -->
                                 <div class="mb-3">
                                     <label for="name" class="form-label"> name</label>

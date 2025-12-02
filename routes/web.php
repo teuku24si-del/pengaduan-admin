@@ -46,7 +46,9 @@ Route::post('question/store', [QuestionController::class, 'store'])
 		->name('question.store');
 
 Route::get('dashboard', [DashboardController::class, 'index'])
-        ->name('dashboard');
+        ->name('dashboard')
+        ->middleware('checkislogin');
+
 
 Route::resource('pelanggan', PelangganController::class);
 
@@ -66,3 +68,9 @@ Route::post('/save','MultipleuploadsController@store')->name('uploads.store');
 //login
 Route::get('login',[AuthController::class, 'index'])->name('login.index');
 Route::post('login',[AuthController::class,'login'])->name('login');
+Route::get('logout',[AuthController::class,'logout'])->name('auth.logout');
+
+//middleware
+Route::group(['middleware' => ['checkrole:Admin']], function () {
+    Route::get('user',[UserController::class,'index'])->name('user.index');
+});

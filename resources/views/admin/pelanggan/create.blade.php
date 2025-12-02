@@ -84,6 +84,7 @@
                                     <label for="phone" class="form-label">Phone</label>
                                     <input type="text" id="phone" name="phone" class="form-control" required>
                                 </div>
+                                
 
                                 <!-- Buttons -->
                                 <div class="">

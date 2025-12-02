@@ -39,12 +39,13 @@
                             <table id="table-user" class="table table-centered table-nowrap mb-0 rounded">
                                 <thead class="thead-light">
 
-                                  
+
                                     <tr>
 
                                         <th class="border-0">Nama Lengkap</th>
                                         <th class="border-0">Email</th>
                                         <th class="border-0">password</th>
+                                        <th class="border-0">role</th>
 
                                         <th class="border-0 rounded-end">Action</th>
                                     </tr>
@@ -56,6 +57,7 @@
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->password }}</td>
+                                            <td>{{ $item->role }}</td>
 
 
                                             <td><a href="{{ route('user.edit', $item->id) }}"
